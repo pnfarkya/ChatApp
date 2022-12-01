@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:utils="clr-namespace:ChatClient.Utils"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Chat Window" Height="450" Width="800">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -74,7 +74,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="5"/>
-                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -86,7 +86,7 @@
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
                         <TextBox Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"/>
-                        <Button Content="Send" Command="{Binding SendMessageCmd}" Margin="10,5,5,0" Width="100" Height="20" Grid.Column="1"/>
+                        <Button Content="Send" Command="{Binding SendMessageCmd}" Margin="10,0,0,0"  Grid.Column="1"/>
                     </Grid>
 
                 </Grid>
@@ -115,10 +115,10 @@
         <ContentControl Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="{Binding .}" ContentTemplate="{StaticResource HeaderTemplate}"/>
 
 
-        <ContentControl Grid.Row="2" Grid.Column="0" Content="{Binding .}" ContentTemplate="{StaticResource ActiveUsersTemplate}"/>
+        <ContentControl Grid.Row="2" Grid.Column="0" Content="{Binding .}" ContentTemplate="{StaticResource ActiveUsersTemplate}" Margin="3,0,0,5"/>
 
 
-        <ContentControl Grid.Row="2" Grid.Column="1" Content="{Binding .}" ContentTemplate="{StaticResource ChatRoomTemplate}"/>
+        <ContentControl Grid.Row="2" Grid.Column="1" Content="{Binding .}" ContentTemplate="{StaticResource ChatRoomTemplate}" Margin="3,30,10,5"/>
 
     </Grid>
 </Window>
