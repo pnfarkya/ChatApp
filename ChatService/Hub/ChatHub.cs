@@ -61,7 +61,7 @@ namespace ChatService.Hub
                         Clients.CallerState.User = id;
                         Clients.Others.UserLogin(user);
                     }
-                    Console.WriteLine($"New User {user} logged in");
+                    Console.WriteLine($"New User {user.Id} logged in");
                 }
             }
             catch (System.Exception ex)
