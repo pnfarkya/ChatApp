@@ -1,1 +1,1 @@
-# SingalRWpfChatApp
+# ChatApp
